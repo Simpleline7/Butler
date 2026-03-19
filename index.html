@@ -63,8 +63,27 @@ document.write('<link rel="manifest" href="' + manifestURL + '">');
   --trans:all .18s cubic-bezier(.4,0,.2,1);
   --safe-bottom:env(safe-area-inset-bottom,0px);
 
-  /* Paper grain texture via CSS */
   --paper:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='.03'/%3E%3C/svg%3E");
+}
+
+/* Dark mode — keeps warm terracotta, just darker background */
+@media(prefers-color-scheme:dark){
+  :root{
+    --bg:#1e1a17;
+    --bg2:#252118;
+    --bg3:#2c271f;
+    --bg4:#342e25;
+    --border:#3d3629;
+    --border2:#4a4235;
+    --text:#f0e8df;
+    --text2:#c4b5a5;
+    --text3:#8a7a6a;
+    --accent:#c97550;
+    --accent2:#d98860;
+    --accentbg:#c9755018;
+    --shadow:0 2px 12px #00000040;
+    --shadow2:0 6px 32px #00000060;
+  }
 }
 
 html,body{height:100%;overflow:hidden;touch-action:manipulation}
